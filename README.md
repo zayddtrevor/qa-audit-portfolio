@@ -112,13 +112,15 @@ All findings are based on manual exploratory and functional testing.
 
 ## 📂 Repository Structure
 
+```text
 qa-audit-portfolio/
 ├── README.md
 └── test-logs/
 └── bug-reports.md
-
+````
 
 ---
+
 
 ## 🧠 Key Learning Outcomes
 
