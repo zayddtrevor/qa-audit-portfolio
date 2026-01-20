@@ -1,74 +1,94 @@
-# Bug Reports – ISP Customer Portal
+# Bug Reports – StageLink QA Audit
+
+This document contains documented issues identified during manual Quality Assurance testing of the StageLink web platform.  
+Each bug includes severity classification, reproduction steps, and expected versus actual behavior.
 
 ---
 
-## Bug ID: BR-01 – Pay Bill Button Not Clickable on Mobile
+## BUG-01: Mobile Navigation Menu Overlaps Content
 
-**Severity:** High
+**Severity:** High  
+**Environment:** Mobile (iPhone 14 Pro Max – Chrome DevTools)
 
-**Environment:**
-- Device: Android
-- Browser: Chrome
-- OS: Android 13
+### Steps to Reproduce
+1. Open StageLink in mobile view.
+2. Tap the hamburger menu icon.
+3. Attempt to navigate through menu options.
 
-**Steps to Reproduce:**
-1. Open ISP Customer Portal on Android device
-2. Log in with valid credentials
-3. Navigate to the Billing page
-4. Tap the "Pay Bill" button
+### Expected Result
+Navigation menu should open cleanly without blocking or overlapping page content.
 
-**Actual Result:**
-- Button does not respond to touch input
+### Actual Result
+Menu overlaps content, causing difficulty in navigation and poor user experience.
 
-**Expected Result:**
-- Button should redirect the user to the payment page
-
-**Status:** Open
+### Impact
+Affects mobile usability and may prevent users from accessing key features.
 
 ---
 
-## Bug ID: BR-02 – Support Ticket Form Allows Empty Submission
+## BUG-02: Favorites Button Placement Causes User Confusion
 
-**Severity:** Medium
+**Severity:** Medium  
+**Environment:** Desktop – Chrome
 
-**Environment:**
-- OS: Windows 11
-- Browser: Google Chrome
+### Steps to Reproduce
+1. Log in as an audience user.
+2. Browse available events.
+3. Attempt to locate the Favorites feature.
 
-**Steps to Reproduce:**
-1. Log in to the customer dashboard
-2. Navigate to Technical Support
-3. Leave all input fields empty
-4. Click "Submit Ticket"
+### Expected Result
+Favorites option should be easily discoverable and accessible.
 
-**Actual Result:**
-- Ticket is submitted without required details
+### Actual Result
+Favorites button placement is not intuitive, leading to user confusion.
 
-**Expected Result:**
-- Error message should appear indicating required fields
-
-**Status:** Open
+### Impact
+Reduces usability and may discourage user engagement.
 
 ---
 
-## Bug ID: BR-03 – Login Error Message Not User-Friendly
+## BUG-03: Password Validation Rules Not Clearly Communicated
 
-**Severity:** Low
+**Severity:** Medium  
+**Environment:** Desktop – Chrome
 
-**Environment:**
-- OS: Windows 11
-- Browser: Mozilla Firefox
+### Steps to Reproduce
+1. Attempt to create a new account.
+2. Enter a password that does not meet requirements.
+3. Submit the registration form.
 
-**Steps to Reproduce:**
-1. Open login page
-2. Enter valid username
-3. Enter incorrect password
-4. Click Login
+### Expected Result
+Clear password requirements should be displayed before submission.
 
-**Actual Result:**
-- Generic error message displayed without guidance
+### Actual Result
+Password requirements are unclear, resulting in failed submissions without proper guidance.
 
-**Expected Result:**
-- Clear message such as "Invalid username or password"
+### Impact
+Increases user friction during account creation.
 
-**Status:** Open
+---
+
+## BUG-04: Inconsistent Button Styling Across Pages
+
+**Severity:** Low  
+**Environment:** Desktop and Mobile – Chrome
+
+### Steps to Reproduce
+1. Navigate through different pages of the platform.
+2. Observe action buttons such as "Submit", "Next", or "Confirm".
+
+### Expected Result
+Buttons should follow consistent styling across all pages.
+
+### Actual Result
+Button styles vary between pages, affecting visual consistency.
+
+### Impact
+Impacts UI consistency but does not block functionality.
+
+---
+
+## 📝 Notes
+
+All issues were identified through manual exploratory and functional testing.  
+Severity levels were assigned based on user impact and business risk.
